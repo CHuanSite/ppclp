@@ -12,7 +12,7 @@
 #' @param T The total number of iterations to do the EM algorithm
 #' @import tidyverse splines splines2
 #' @export ppclp2D
-#' @example
+#' @examples
 #' data("threeExample)
 #' tmpCurve = ppclp2D(threeExample$x, threeExample$y, threeExample$x_fix, threeExample$y_fix)
 #' plot(threeExample$x, threeExample$y, xlim = c(0,1), ylim = c(0,1), pch = 16, cex = 0.8)
