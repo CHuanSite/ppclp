@@ -158,7 +158,7 @@ ppclp2D <- function(x, y, x_fix, y_fix, K = 50, degree_free = 10, lambda = 0.5, 
 
 
 
-ppclp3D <- function(x, y, z, x_fix, y_fix, z_fix, K = 200, degree_free = 50, lambda = 100, T = 100){
+ppclp3D <- function(x, y, z, x_fix, y_fix, z_fix, K = 200, degree_free = 50, lambda = 100, T = 20){
   N = length(x)
 
   ## Basis for the spline
