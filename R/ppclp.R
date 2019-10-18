@@ -13,14 +13,14 @@
 #' @import tidyverse splines splines2
 #' @export ppclp2D
 #' @examples
-#' data("threeExample)
-#' tmpCurve = ppclp2D(threeExample$x, threeExample$y, threeExample$x_fix, threeExample$y_fix)
+#' data("threeExample")
+#' tmpCurve = ppclp2D(threeExample$x, threeExample$y, threeExample$xFix, threeExample$yFix)
 #' plot(threeExample$x, threeExample$y, xlim = c(0,1), ylim = c(0,1), pch = 16, cex = 0.8)
-#' lines(tmpCurve,$xFit tmpCurve$yFit, type = "l", col = "red", lwd = 5)
+#' lines(tmpCurve$xFit, tmpCurve$yFit, type = "l", col = "red", lwd = 5)
 
 
 
-ppclp2D <- function(x, y, x_fix, y_fix, K = 50, degree_free = 10, lambda = 0.2, T = 100){
+ppclp2D <- function(x, y, x_fix, y_fix, K = 50, degree_free = 10, lambda = 0.5, T = 100){
   ## Total number of points in the curve
   N = length(x)
 
@@ -85,7 +85,7 @@ ppclp2D <- function(x, y, x_fix, y_fix, K = 50, degree_free = 10, lambda = 0.2, 
     B_XY = t(B) %*% diag_B %*% B
 
     ## Inverse matrix for the estimation
-    Inverse_M = solve(B_XY + lambda1 * length_penalty )
+    Inverse_M = solve(B_XY + lambda * length_penalty )
 
     beta_x_new  = Inverse_M %*% B_XX
     beta_y_new  = Inverse_M %*% B_YY

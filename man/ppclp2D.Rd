@@ -4,7 +4,7 @@
 \alias{ppclp2D}
 \title{2D prbabilistic principal curve with length penalty}
 \usage{
-ppclp2D(x, y, x_fix, y_fix, K = 50, degree_free = 10, lambda = 0.2,
+ppclp2D(x, y, x_fix, y_fix, K = 50, degree_free = 5, lambda = 0.2,
   T = 100)
 }
 \arguments{
@@ -26,4 +26,10 @@ ppclp2D(x, y, x_fix, y_fix, K = 50, degree_free = 10, lambda = 0.2,
 }
 \description{
 This function applies the probabilistic principal curve algorithm with length penalty
+}
+\examples{
+data("threeExample")
+tmpCurve = ppclp2D(threeExample$x, threeExample$y, threeExample$xFix, threeExample$yFix)
+plot(threeExample$x, threeExample$y, xlim = c(0,1), ylim = c(0,1), pch = 16, cex = 0.8)
+lines(tmpCurve$xFit, tmpCurve$yFit, type = "l", col = "red", lwd = 5)
 }
