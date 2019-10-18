@@ -4,7 +4,7 @@
 \alias{ppclp2D}
 \title{2D prbabilistic principal curve with length penalty}
 \usage{
-ppclp2D(x, y, x_fix, y_fix, K = 50, degree_free = 5, lambda = 0.2,
+ppclp2D(x, y, x_fix, y_fix, K = 50, degree_free = 10, lambda = 0.5,
   T = 100)
 }
 \arguments{
