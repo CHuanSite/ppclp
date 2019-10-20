@@ -2,6 +2,9 @@
 
 A R package to implement the probabilistic principal curve with length penalty and fixed starting and ending point. This package includes both the 2D and 3D version. 
 
+## Shiny
+A shiny app has been built for this package, please refer to [ppclpShiny](https://ppclp.shinyapps.io/ppclpShiny/)
+
 ## Functions
 ```ppclp2D```:This function implements the probabilistic principal curve with length penalty(ppclp) algorithm in 2D image
 
