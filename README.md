@@ -12,7 +12,7 @@ A R package to implement the probabilistic principal curve with length penalty a
 ```threeExample```: A list, containing data from one 3D SPECT on colon image, including the x, y, z coordinates, start point, end point.
 
 ## Example
-### 2D MINST number example
+### 2D MINST example
 Load the package into R
 ```
 library(devtools)
@@ -38,7 +38,7 @@ plot(threeExample$x, threeExample$y, xlim = c(0,1), ylim = c(0,1), pch = 16, cex
 lines(tmpCurve$xFit, tmpCurve$yFit, type = "l", col = "red", lwd = 5)
 ```
 
-### 3D MINST number example
+### 3D SPECT example
 Load the package into R
 ```
 library(devtools)
