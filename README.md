@@ -54,18 +54,3 @@ library(plotly)
 library(splines)
 library(splines2)
 ```
-Load spect data into R from the package **ppclp**
-```
-data("spectExample")
-```
-Compute the principal curve 
-```
-tmpCurve = ppclp3D(spectExample$x, spectExample$y, spectExample$z, spectExample$xFix, spectExample$yFix, spectExample$zFix)
-```
-Plot the final result
-```
-plot_ly() %>% add_trace(x = spectExample$x, y = spectExample$y, z = spectExample$z, type = "scatter3d", mode = "markers", name = 'points', marker = list(size = 1, color = 'rgba(0, 0, 0, .9)', opacity = 0.4)) %>%
-add_trace(x = spectExample$xFix[1], y = spectExample$yFix[1], z = spectExample$zFix[1], type = "scatter3d", mode = "markers", name = 'A', marker = list(size = 10, color = 'rgba(0, 255, 0, .9)', opacity = 1)) %>%
-add_trace(x = spectExample$xFix[2], y = spectExample$yFix[2], z = spectExample$zFix[2], type = "scatter3d", mode = "markers", name = 'M', marker = list(size = 10, color = 'rgba(0, 0, 255, .9)', opacity = 1)) %>%
-add_trace(x = as.vector(tmpCurve$xFit), y = as.vector(tmpCurve$yFit), z = as.vector(tmpCurve$zFit), type = "scatter3d", mode = "lines", name = "theoretical line", line = list(width = 5, color = 'rgba(255, 0, 0, .9)'))
-```
