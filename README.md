@@ -29,6 +29,7 @@ library(splines2)
 ```
 Load MNIST data into R from the package **ppclp**
 ```
+library(ppclp)
 data("threeExample")
 ```
 Compute the principal curve 
